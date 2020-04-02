@@ -9,7 +9,7 @@ Sample code to test out google cloud's load balancing and CDN
 @app.route('/')
 def hello():
     hostname = socket.gethostname()
-    return "Hello World! from " + hostname
+    return "Hellooo World! from " + hostname
 
 if __name__ == '__main__':
-    app.run("0.0.0.0")
+    app.run("0.0.0.0", port=5000, debug=True))
