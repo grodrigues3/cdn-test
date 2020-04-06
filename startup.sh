@@ -16,12 +16,12 @@ useradd -m -d /home/pythonapp pythonapp
 # Fetch source code
 export HOME=/root
 rm -r /opt/app
-git clone https://github.com/grodrigues3/cdn-test/ /opt/app
+git clone https://github.com/grodrigues3/cdn-test/ /opt/app/
 
 # Python environment setup
 virtualenv -p python3 /opt/app/cdn/env
 source /opt/app/cdn/env/bin/activate
-#/opt/app/gce/env/bin/pip install -r /opt/app/gce/requirements.txt
+/opt/app/gce/env/bin/pip install -r /opt/app/requirements.txt
 
 # Set ownership to newly created account
 chown -R pythonapp:pythonapp /opt/app
